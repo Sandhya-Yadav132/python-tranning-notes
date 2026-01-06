@@ -57,12 +57,13 @@ print("Hello")
       . Variable name is case sensitive 
       . A variable name cannot be a *Keyword*
   ### Examples
-  .age=20  
-  ._total=100
-  .2namw="hello"
-  .My name="hello"  ! 
-  .My_name="hello"
-  .name@ =5         !
+  - age=20          ✅
+  - _total=100      ✅
+  - 2namw="hello"   ❌
+  - t6 = "Sandhya"  ✅
+  - My name="hello" ❌! 
+  - My_name="hello" ✅
+  - name@ =5        ❌ !
   
 
 
