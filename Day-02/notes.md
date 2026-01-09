@@ -87,3 +87,68 @@
     x = {"name" : "John", "age" : 36}  # dict
     x = {"apple", "banana", "cherry"}  # set
     x = True          # bool
+
+## Numeric Data Type
+Numeric data types numbers ko represent aur store karne ke liye use hote hain, jinke upar mathematical operations perform kiye ja sakte hain.
+
+### Types of Numeric Data Types in Python
+Python me 3 numeric data types hote hain:
+1️⃣ int
+2️⃣ float
+3️⃣ complex
+
+1️⃣ int (Integer)
+int whole numbers ko represent karta hai, bina decimal ke.
+🔹 Example
+a = 10
+b = -25
+c = 0
+
+🔹 Key Points
+Decimal allowed nahi hota
+Python me integer size unlimited hota hai (memory ke hisaab se)
+```python
+x = 999999999999999999999
+print(type(x))   # int
+```
+
+2️⃣ float (Floating Point)
+float decimal numbers ko represent karta hai.
+🔹 Example
+x = 3.14
+y = -0.5
+z = 1.0
+
+🔹 Scientific Notation
+a = 1e3   # 1000.0
+b = 2e-2  # 0.02
+
+🔹 Key Points
+Decimal ke kaaran precision issue hota hai
+```python
+print(0.1 + 0.2)  
+# 0.30000000000000004
+```
+3️⃣ complex (Complex Number)
+complex numbers real + imaginary part se milkar bante hain.
+
+🔹 Format
+a = 2 + 3j
+🔹 Example
+```python
+c = 5 + 4j
+print(c.real)   # 5.0
+print(c.imag)   # 4.0
+```
+
+🔹 Key Points
+j imaginary part ko represent karta hai
+Mostly scientific, ML, signal processing me use hota hai
+
+📌 Type Conversion (Numeric)
+    int(3.7)      # 3
+    float(5)      # 5.0
+    complex(2,3)  # 2+3j
+
+📌 Interview One-Liner ⭐
+“Numeric data types in Python are int, float, and complex, used to store numerical values.”
