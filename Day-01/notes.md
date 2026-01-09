@@ -5,13 +5,13 @@
 - Created by Guido van Rossum
 - First released in 1991
 
-##🔹 Compiler vs Interpreter (Complete but Short)
+## Compiler vs Interpreter (Complete but Short)
 
 ### Compiler: Poore source code ko ek saath machine code me convert(translate krke .exe file) karta hai, phir execution (by CPU )hota hai.
 
 ### Interpreter: Source code ko line by line read, translate aur execute karta hai.(Runtime pr)
 
-###Execution
+### Execution
 
 - Compiler: Translation before execution
 
@@ -138,7 +138,7 @@ print("Hello")
 - All objects(int,list,dict,class) heap me store hote hai.
 
 ### Memory management techniques
-- i> Reference counting
+-  Reference counting
   - Har object k sath reference count hota hai.
   - Reference count = no. of variables pointing object.
   - count = 0 -> memory free.
@@ -149,7 +149,7 @@ print("Hello")
     del a  # ref=1
     del b  # ref=0 -> memory free
     ```
-- ii> Garbage collection
+-  Garbage collection
     - Cyclic reference handle krta hai.
     - Background me automatically run hota hai.
   ```python
