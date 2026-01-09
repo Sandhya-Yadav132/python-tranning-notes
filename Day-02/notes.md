@@ -99,7 +99,9 @@ Python me 3 numeric data types hote hain:
 
 1️⃣ int (Integer) :
   int whole numbers ko represent karta hai, bina decimal ke.
+  
 🔹 Example
+
       a = 10
       b = -25
       c = 0
@@ -116,16 +118,18 @@ print(type(x))   # int
     float decimal numbers ko represent karta hai.
     
 🔹 Example
+
     x = 3.14
     y = -0.5
     z = 1.0
 
 🔹 Scientific Notation
-    a = 1e3   # 1000.0
-    b = 2e-2  # 0.02
+
+    a = 1e3     # 1000.0
+    b = 2e-2    # 0.02
 
 🔹 Key Points
-    Decimal ke kaaran precision issue hota hai
+    - Decimal ke kaaran precision issue hota hai
 ```python
 print(0.1 + 0.2)  
 # 0.30000000000000004
@@ -134,7 +138,8 @@ print(0.1 + 0.2)
   complex numbers real + imaginary part se milkar bante hain.
 
 🔹 Format
-- a = 2 + 3j
+
+     a = 2 + 3j
   
 🔹 Example
 ```python
@@ -148,9 +153,11 @@ print(c.imag)   # 4.0
   - Mostly scientific, ML, signal processing me use hota hai
 
 📌 Type Conversion (Numeric)
-  - int(3.7)      # 3
-  - float(5)      # 5.0
-  - complex(2,3)  # 2+3j
+
+     int(3.7)      # 3
+     float(5)      # 5.0
+     complex(2,3)  # 2+3j
 
 📌 Interview One-Liner ⭐
+
       “Numeric data types in Python are int, float, and complex, used to store numerical values.”
