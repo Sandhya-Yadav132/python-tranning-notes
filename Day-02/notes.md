@@ -96,7 +96,7 @@ Python me 3 numeric data types hote hain:
   - 1️⃣ int
   - 2️⃣ float
   - 3️⃣ complex
-### Note
+### Note:-
 - Type Promotion Rule (Common for all numeric types)
 
       int → float → complex
@@ -106,7 +106,7 @@ Python me 3 numeric data types hote hain:
       int + complex → complex
       float + complex → complex
   
-1️⃣ int (Integer) :
+1️⃣ *int (Integer)* :
   int whole numbers ko represent karta hai, bina decimal ke.
   
 🔹 Example
@@ -175,7 +175,7 @@ print(int("-25")  #-25
             
          
           
-2️⃣ float (Floating Point):
+2️⃣ *float (Floating Point)*:
     float decimal numbers ko represent karta hai.
     
 🔹 Example
@@ -184,18 +184,60 @@ print(int("-25")  #-25
     y = -0.5
     z = 1.0
 
+    float(10)  # 10.0
+    float("10.5")  # 10.5
+    float("-3.2")  #-3.2
+    float("ab")   #error
+
 🔹 Scientific Notation
 
     a = 1e3     # 1000.0
     b = 2e-2    # 0.02
 
 🔹 Key Points
-    - Decimal ke kaaran precision issue hota hai
-```python
-print(0.1 + 0.2)  
-# 0.30000000000000004
+     - Range : Approx 1.7e-308 to 1.8e+308 (IEEE 754)   
+     - 0.1+0.2 = 0.3 ❌ ❔🤔
+  ```python
+  print(0.1 + 0.2)  
+  # 0.30000000000000004
+  ```
+  - Reason : - Float binary format me store hota hai, kuch decimal value exactly represent nhi hoti h
+  - solution :
 ```
-3️⃣ complex (Complex Number):
+        #1) round()
+         print(round(0.1+0.2,1)  # 3.0
+
+        # 2) decimal module
+        from decimal import Decimal
+        a=Decimal.('0.1')
+        b=Decimal.('0.2')
+        print(a+b)    # 0.3
+
+        # 3) math.isclose() -> float comparison
+        import math
+        print(math.isclose(0.1+0.2,0.3)  # True
+        #==
+        print(0.1+0.2==0.3)  # False
+```
+### Note: *Never compare float using ==(double equal)❌ , use math.isclose()✅*
+
+- Special floating point value, jo invalid mathematical result ko represent krta hai.
+    - float('inf') -> +♾️
+    - float('-inf') -> -♾️
+    - float('nan')  -> NaN
+### Note: - *NaN kisi se equal nhi hota h,even itself.*
+- Example:
+```
+    #NaN
+    x= float('nan')
+    print(x==x)   # False
+
+    #inf
+    x=float('inf')-float('inf')
+    print(x)      #nan
+``` 
+      
+3️⃣ *complex (Complex Number)*:
   complex numbers real + imaginary part se milkar bante hain.
 
 🔹 Format
