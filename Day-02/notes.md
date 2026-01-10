@@ -294,13 +294,17 @@ print(c.imag)   # 4.0
 
          -> (2+3j)>(1+2j)  # TypeError
             complex number ka ordering define nhi hota h.
+    
          -> (2+3j)==(2+3j)  # True
+    
          -> z= 3+4j
             print(abs(z)) # 5.0
             Formula : √(r²+i²)
+    
          -> print(5+(2+3j))      # (7+3j)
          -> print(2.5+(1+2j))    # (3.5+2j)
             int/float automatically complex me convert ho jata h.
+    
          -> int(2+3j)      # ❌ TypeError
          -> float(2+3j)    # ❌ TypeError
             complex ko int/float me convert nhi kr skte h
