@@ -221,7 +221,7 @@ print(int("-25")  #-25
 ```
 ### Note: *Never compare float using ==(double equal)❌ , use math.isclose()✅*
 ### *round()*: Python ka built-in function hai jo number ko nearest value tak round karta hai.
-       Call	          Return
+      Call	          Return
       round(x)	      int
       round(x, n)	    float            
   - round(number, n)
@@ -253,8 +253,8 @@ print(int("-25")  #-25
 ### Note: *“Python round() uses bankers rounding (round half to even). Normal rounding behavior appears only when the value is not exactly halfway.”✅*
 
 ### *Special floating point value*, jo invalid mathematical result ko represent krta hai.
-    - float('inf') -> +♾️
-    - float('-inf') -> -♾️
+    - float('inf') -> +∞
+    - float('-inf') -> -∞
     - float('nan')  -> NaN
 ### Note: - *NaN kisi se equal nhi hota h,even itself.*
 - Example:
@@ -273,11 +273,16 @@ print(int("-25")  #-25
 
 🔹 Format
 
-     a = 2 + 3j
+    # z = a + bj   # (j=√-1)
+     where a = real part 
+           b = img part 
+    # z = complex(2,3)
+     print(z)      # (2+3j)
   
 🔹 Example
 ```python
 c = 5 + 4j
+print(type(c))  # complex
 print(c.real)   # 5.0
 print(c.imag)   # 4.0
 ```
@@ -285,6 +290,20 @@ print(c.imag)   # 4.0
 🔹 Key Points
   - j imaginary part ko represent karta hai
   - Mostly scientific, ML, signal processing me use hota hai
+  - No fixed range(real + img part follow float range)
+
+         -> (2+3j)>(1+2j)  # TypeError
+            complex number ka ordering define nhi hota h.
+         -> (2+3j)==(2+3j)  # True
+         -> z= 3+4j
+            print(abs(z)) # 5.0
+            Formula : √(r²+i²)
+         -> print(5+(2+3j))      # (7+3j)
+         -> print(2.5+(1+2j))    # (3.5+2j)
+            int/float automatically complex me convert ho jata h.
+         -> int(2+3j)      # ❌ TypeError
+         -> float(2+3j)    # ❌ TypeError
+            complex ko int/float me convert nhi kr skte h
 
 📌 Type Conversion (Numeric)
 
