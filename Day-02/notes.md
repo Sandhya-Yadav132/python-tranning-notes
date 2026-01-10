@@ -11,11 +11,11 @@
   - Binary Types:	bytes, bytearray, memoryview
   - None Type:	NoneType
 
-## Python mein data types do categories mein divided hote hain:
+## Python mein data types 2 categories mein divided hote hain:
  1. Mutable Data Types
  2. Immutable Data Types
 
-### Mutable Data Types
+### * Mutable Data Types
   Mutable data types wo hote hain jinhe hum modify kar sakte hain bina unka memory address change kiye.
 ### Examples of Mutable Data Types:
      1. Lists
@@ -31,7 +31,7 @@
   print("Memory Address of List:", id(my_list))
 ```
 
-### Immutable Data Types
+### * Immutable Data Types
   Immutable data types wo hote hain jinhe hum modify nahi kar sakte bina unka memory address change kiye.
 ### Examples of Immutable Data Types:
      1. Strings
@@ -96,7 +96,16 @@ Python me 3 numeric data types hote hain:
   - 1️⃣ int
   - 2️⃣ float
   - 3️⃣ complex
+### Note
+- Type Promotion Rule (Common for all numeric types)
 
+      int → float → complex
+      (lower precision → higher precision)
+  
+      Matlab:
+      int + complex → complex
+      float + complex → complex
+  
 1️⃣ int (Integer) :
   int whole numbers ko represent karta hai, bina decimal ke.
   
@@ -108,12 +117,64 @@ Python me 3 numeric data types hote hain:
 
 🔹 Key Points
    - Decimal allowed nahi hota
+ ```python
+print(int(3.9)  # 3 (Reason : truncate , not round)
+```
    - Python me integer size unlimited hota hai (memory ke hisaab se)
 ```python
 x = 999999999999999999999
 print(type(x))   # int
 ```
+- Small integer cache(-5 to 256)
+```python
+a= 256
+b= 256
+print(a is b) # True
+```
+- ==(double eqaul) : value comparison
+- is : memory location comparison
+- bool is the subset of integer
+    - bool(0) : False (for zero)
+    - bool(1) : True  (for every non zero val.)
+- String to int (base 10 by default)
+```python
+print(int("10")   # 10
+print(int("-25")  #-25
+```
+- String with base: syntax -> int(string,base)
+  - base 2(binary)
 
+        int("101",2)  # 5 (binary)
+        - "101" -> binary number
+        - base -> 2
+        Digit         place value
+        1              2^2
+        0              2^1
+        1              2^0
+        calculation:  1*2^2+0*2^1+1*2^0
+                      4+0+1=5
+    - base 16(Hexadecimal)
+
+          1> int("A",16)  # 10 
+          - "A" -> hexadecimal digit
+          - base -> 16
+          Hex digit mapping
+            0-9 -> 0-9
+            A -> 10
+            B -> 11
+            ...
+            F -> 15
+          2> int("1A",16)  # 26 
+            hex number =1A
+            Digit    value    power of 16
+            1          1      16^1
+            A          10     16^0
+            calculation:  (1*16^1)+(10*16^0)
+                          = 1*16+10*1
+                          = 16+10=26
+            
+         
+          
 2️⃣ float (Floating Point):
     float decimal numbers ko represent karta hai.
     
