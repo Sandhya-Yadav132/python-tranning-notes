@@ -203,7 +203,7 @@ print(int("-25")  #-25
   ```
   - Reason : - Float binary format me store hota hai, kuch decimal value exactly represent nhi hoti h
   - solution :
-```
+```python
         #1) round()
          print(round(0.1+0.2,1)  # 3.0
 
@@ -220,14 +220,45 @@ print(int("-25")  #-25
         print(0.1+0.2==0.3)  # False
 ```
 ### Note: *Never compare float using ==(double equal)❌ , use math.isclose()✅*
+### *round()*: Python ka built-in function hai jo number ko nearest value tak round karta hai.
+       Call	          Return
+      round(x)	      int
+      round(x, n)	    float            
+  - round(number, n)
+    - number → int / float
+    - n = number of decimal places(optional)
+    - n positive, zero ya negative ho sakta hai
+  - Rule:
+    - decimal < 0.5 → down
+    - decimal > 0.5 → up
+    - decimal = 0.5 → ⚠️ special rule (bankers rounding -> Even(Nearest))
+  - Exmple:
 
-- Special floating point value, jo invalid mathematical result ko represent krta hai.
+        # when n positive
+        round(12.4) → 12
+        round(12.6) → 13
+        round(12.5) → 12   ❗(12 is Even)
+        round(13.5) → 14   ❗(14 is Even)
+
+        # when n=0  (Nearest integer, but float return hota hai)
+        round(12.6, 0) → 13.0
+        round(12.5, 0) → 12.0
+        round(13.5, 0) → 14.0
+
+        when n negetive : Left side rounding (tens, hundreds, thousands)
+        round(1234, -2) → 1200
+        round(1299, -2) → 1300
+        round(1500, -3) → 2000
+    
+### Note: *“Python round() uses bankers rounding (round half to even). Normal rounding behavior appears only when the value is not exactly halfway.”✅*
+
+### *Special floating point value*, jo invalid mathematical result ko represent krta hai.
     - float('inf') -> +♾️
     - float('-inf') -> -♾️
     - float('nan')  -> NaN
 ### Note: - *NaN kisi se equal nhi hota h,even itself.*
 - Example:
-```
+```python
     #NaN
     x= float('nan')
     print(x==x)   # False
@@ -237,8 +268,8 @@ print(int("-25")  #-25
     print(x)      #nan
 ``` 
       
-3️⃣ *complex (Complex Number)*:
-  complex numbers real + imaginary part se milkar bante hain.
+3️⃣ *complex (Complex Number)* :
+   complex numbers real + imaginary part se milkar bante hain.
 
 🔹 Format
 
