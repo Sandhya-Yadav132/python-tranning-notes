@@ -153,9 +153,9 @@ print(int("-25")  #-25
         1              2^0
         calculation:  1*2^2+0*2^1+1*2^0
                       4+0+1=5
-    - base 16(Hexadecimal)
+  - base 16(Hexadecimal)
 
-          1> int("A",16)  # 10 
+         1> int("A",16)  # 10 
           - "A" -> hexadecimal digit
           - base -> 16
           Hex digit mapping
