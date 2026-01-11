@@ -25,6 +25,7 @@ s = "Hello"
 s[0] = "h"   # ❌ Error
 ```
 👉 String change nahi hoti, naya string banta hai
+
 2. Indexing
 ```python
 s = "Python"
