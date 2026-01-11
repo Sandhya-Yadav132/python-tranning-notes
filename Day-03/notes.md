@@ -78,6 +78,17 @@ s = "hello"
 print(s.replace("l", "L"))   # heLLo
 ```
 5. split and join
+- split(): split() method breaks a string into a list of substrings based on a separator.
+- string.split(separator, maxsplit)
+  - separator:	jahan se string todni hai
+    maxsplit:	kitni baar split karna hai
+```python
+email = input("Enter your college email address: ")
+domain = email.split('@')[1]  # yha @ ke baad wala part le rahe hain 1 index domain wala hai or 0 index username wala hai
+print("Domain name is:", domain)
+# i/p : jit@borawan.com
+# o/p : borawan.com
+```
 ```python
 s = "a,b,c"
 print(s.split(","))    # ['a','b','c']
