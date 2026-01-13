@@ -266,8 +266,56 @@ print(int("-25")  #-25
     #inf
     x=float('inf')-float('inf')
     print(x)      #nan
-``` 
-      
+```
+
+
+### Formatting Float Values to Fixed Decimal Places
+
+Python me float values ko specific decimal points (jaise 2 ya 3) tak print karne ke liye formatting techniques use ki jaati hain.
+Ye mostly output display, reports, aur exam questions me kaam aata hai.
+
+🔹 Why Decimal Formatting is Needed
+- Output ko clean & readable banana
+- Financial / scientific values ko fixed precision me dikhana
+- Extra decimal digits avoid karna
+
+✅ Method 1: f-string (BEST & Recommended)
+```python
+x = 12.34567
+print(f"{x:.2f}")
+print(f"{x:.3f}")
+```
+
+📌 Explanation:
+- .2f → 2 decimal places
+- .3f → 3 decimal places
+
+Sirf display ke liye (value change nahi hoti)
+
+    Output:
+    12.35
+    12.346
+
+✅ Method 2: format() Method
+```python
+x = 12.34567
+print("{:.2f}".format(x))
+print("{:.3f}".format(x))
+```
+
+📌 Older method, but still valid.
+
+✅ Method 3: round() Function
+```python
+x = 12.34567
+print(round(x, 2))
+print(round(x, 3))
+```
+
+📌 Calculation ke liye use hota hai
+⚠️ Banker's rounding apply ho sakta hai
+
+    
 3️⃣ *complex (Complex Number)* :
    complex numbers real + imaginary part se milkar bante hain.
 
