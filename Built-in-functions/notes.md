@@ -99,11 +99,11 @@ cmp() :x: (not in Python 3)
 - hex()
 
 ### Membership Operators
-in
-not in
+- in
+- not in
 ### Identity Operators
-is
-is not
+- is
+- is not
 
 ## 5. Type Casting / Conversion
 ### Type Conversion Functions
