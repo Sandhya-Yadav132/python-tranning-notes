@@ -101,3 +101,192 @@ print(t[1][0])   # 2
 - Return multiple values from a function
 
 - Dictionary keys
+
+
+# Set 
+
+## 🔹 What is a Set in Python?
+
+- Set unordered collection hota hai
+- Duplicate values allowed nahi hoti
+- Mutable (change ho sakta hai)
+```python
+s = {1, 2, 3, 3}
+print(s)   # {1, 2, 3}
+```
+## 🟢 Add Elements
+### 1️⃣ add(x)
+
+➡ Single element add karta hai
+```python
+s = {1, 2}
+s.add(3)
+print(s)   # {1, 2, 3}
+```
+
+📌 Agar element already present hai → koi change nahi
+
+### 2️⃣ update(iterable)
+
+➡ Multiple elements add karta hai (list, tuple, set)
+```python
+s = {1, 2}
+s.update([3, 4, 5])
+print(s)   # {1, 2, 3, 4, 5}
+```
+
+- 📌 add() = single
+= 📌 update() = multiple
+
+🔴 Remove Elements
+### 3️⃣ remove(x)
+
+- ➡ Element remove karta hai
+- ❌ Agar element nahi mila → KeyError
+```python
+s = {1, 2, 3}
+s.remove(2)
+print(s)   # {1, 3}
+``` 
+### 4️⃣ discard(x)
+
+- ➡ Element remove karta hai
+- ✅ Agar element nahi mila → no error
+```python
+s = {1, 2, 3}
+s.discard(5)   # no error
+print(s)
+```
+
+- 📌 Interview tip:
+- remove() error deta hai, discard() safe hota hai
+
+### 5️⃣ pop()
+
+➡ Random element remove karta hai (unordered)
+```python
+s = {1, 2, 3}
+x = s.pop()
+print(x)
+print(s)
+```
+
+📌 Pop ka element fixed nahi hota
+
+### 6️⃣ clear()
+
+➡ Set ko empty bana deta hai
+```python
+s = {1, 2, 3}
+s.clear()
+print(s)   # set()
+```
+## 🔵 Set Operations (New Set Return)
+### 7️⃣ union()
+
+➡ Dono sets ke saare unique elements
+```python
+a = {1, 2, 3}
+b = {3, 4}
+print(a.union(b))   # {1, 2, 3, 4}
+```
+### 8️⃣ intersection()
+
+➡ Common elements
+
+print(a.intersection(b))   # {3}
+
+### 9️⃣ difference()
+
+➡ A - B
+
+print(a.difference(b))   # {1, 2}
+
+### 🔟 symmetric_difference()
+
+➡ Common hata ke baaki
+
+print(a.symmetric_difference(b))   # {1, 2, 4}
+
+## 🟡 Update Operations (Original Set Change)
+### 1️⃣1️⃣ intersection_update()
+```python
+a.intersection_update(b)
+print(a)   # {3}
+```
+### 1️⃣2️⃣ difference_update()
+```python
+a = {1,2,3}
+a.difference_update({2})
+print(a)   # {1,3}
+```
+### 1️⃣3️⃣ symmetric_difference_update()
+```python
+a = {1,2,3}
+a.symmetric_difference_update({3,4})
+print(a)   # {1,2,4}
+```
+
+📌 Difference:
+
+union() → new set
+
+update() → same set modify
+
+## 🟣 Check Relationships
+### 1️⃣4️⃣ issubset()
+```python
+a = {1,2}
+b = {1,2,3}
+print(a.issubset(b))   # True
+
+# 1️⃣5️⃣ issuperset()
+print(b.issuperset(a))   # True
+
+# 1️⃣6️⃣ isdisjoint()
+
+➡ Common element nahi hona chahiye
+
+a = {1,2}
+b = {3,4}
+print(a.isdisjoint(b))   # True
+```
+### 🔶 Built-in Functions with Sets
+## 🔹 Information / Calculation
+```python
+s = {1, 2, 3}
+
+- (s)   # 3
+- min(s)   # 1
+- max(s)   # 3
+- sum(s)   # 6
+```
+## 🔹 Type & Conversion
+- set([1,2,2,3])     # {1,2,3}
+- list(s)            # [1,2,3]
+- tuple(s)           # (1,2,3)
+- sorted(s)          # [1,2,3]
+
+
+📌 sorted() list return karta hai
+
+## 🔹 Checking
+- all()
+
+➡ Sab True ho to True
+
+    - all({1,2,3})   # True
+    - all({0,1})     # False
+
+- any()
+
+➡ Ek bhi True ho to True
+
+    any({0,0,1})   # True
+
+## Membership
+```python
+s = {1,2,3}
+print(2 in s)       # True
+print(5 not in s)   # True
+```
