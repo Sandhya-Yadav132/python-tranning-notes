@@ -1,4 +1,4 @@
-### Built-in Functions That Work With Tuples
+# Built-in Functions That Work With Tuples
 ## Information / Calculation
 - len(tuple)
 - min(tuple)
@@ -25,7 +25,7 @@
 - Concatenation → +
 - Repetition → *
 
-### Set Built-in Methods
+# Set Built-in Methods
 ## Add Elements
 - add(x)
 - update(iterable)
@@ -51,7 +51,7 @@
 - issuperset()
 - isdisjoint()
 
-### Built-in Functions That Work With Sets
+# Built-in Functions That Work With Sets
 ## Information / Calculation
 - len(set)
 - min(set)
