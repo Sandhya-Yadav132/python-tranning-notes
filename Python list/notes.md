@@ -1,6 +1,6 @@
 # Python List
 
-##1️⃣ What is a List in Python?
+## 1️⃣ What is a List in Python?
 
 - A list is a collection of items in a particular order.
 
