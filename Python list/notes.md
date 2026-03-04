@@ -23,7 +23,7 @@ print(fruits)   # ['apple', 'banana', 'cherry']
 print(numbers)  # [1, 2, 3, 4, 5]
 print(mixed)    # [1, 'apple', True, 3.14]
 ```
-###Real-life analogy:
+### Real-life analogy:
 
 - Think of a list as a shopping bag. You can put anything inside (fruits, snacks, clothes), remove things, or rearrange them.
 
@@ -367,11 +367,11 @@ True
 ###  6️⃣ List-Related Operations (Important)
     Operation    	  Example        	Output
     Indexing	      lst[0]	        first element
-    Negative        Indexing	      lst[-1]	last element
-    Slicing	        lst[1:3]	      sublist
-    Membership	    "apple" in lst	True/False
+    Negative          Indexing	        lst[-1]	last element
+    Slicing	          lst[1:3]	        sublist
+    Membership	      "apple" in lst	True/False
     Concatenation	  [1,2]+[3,4]	    [1,2,3,4]
-    Repetition	    [0]*3	          [0,0,0]
+    Repetition	      [0]*3	            [0,0,0]
   ###  Real-life Examples / Logical Use Cases
 
 ## 🔥List ko list, tuple, dict, set ke andar kaha-kaha use kar sakte hain?
@@ -509,9 +509,9 @@ True
 ### 🔥 Important Concept: Hashable vs Mutable
     Type        	Mutable?	      Hashable?    	Set/Dict Key me allowed?
     List	        Yes	            ❌ No	        ❌
-    Tuple	        No	            ✅ Yes	      ✅
-    String	      No	            ✅ Yes	      ✅
-    Set	          Yes	            ❌ No	        ❌
+    Tuple	        No	            ✅ Yes	        ✅
+    String	        No	            ✅ Yes	        ✅
+    Set	            Yes	            ❌ No	        ❌
 ### 🎯 Final Interview Summary
 
     ✔ List ke andar → List, Tuple, Dict, Set sab aa sakte hain
